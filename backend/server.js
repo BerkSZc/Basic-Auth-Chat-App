@@ -18,6 +18,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
+app.use("/", (req, res) => {
+  res.send("hello");
+});
+
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at http://localhost:${PORT}`);
   connectDB();
