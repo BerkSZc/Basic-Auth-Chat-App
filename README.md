@@ -61,6 +61,9 @@ Backend’i çalıştırın:
 
 npm run server
 
+Docker sayesinde tek komut ile sistemi kurabilirsiniz:
+docker compose up --build
+
 
 API Testi ve Kullanımı:
 
