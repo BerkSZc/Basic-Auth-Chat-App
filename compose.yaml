@@ -11,13 +11,11 @@ services:
   server:
     build:
       context: .
-    environment:
-      NODE_ENV: production
-      PORT: 5000
-      MONGO_URI: "mongodb+srv://berksozcu0_db_user:vKT1yiH91pTyAHDP@cluster0.ei5goye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-      JWT_SECRET: "vYopKuGoptMofNLsaLtkL1OgsQCtFr1QnFGGKYZOmis="
+
     ports:
       - 5000:5000
+    env_file:
+      - .env
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the
